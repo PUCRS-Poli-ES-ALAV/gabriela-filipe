@@ -37,11 +37,20 @@ public class Recursao {
         return k + soma(k + 1, j);
     }
 
-    /*
-     * Modele e implemente um método recursivo que recebe um String em retorna true se este String for um palíndrome, false caso contrário.
-    ``` 
-         boolean isPal(String s) 
-    ```
+    //Modele e implemente um método recursivo que recebe um String em retorna true se este String for um palíndrome, false caso contrário.
+    public static boolean isPal(String s){
+       for(int i = 0, j = s.length() - 1; i < j; i++, j--){
+        if(s.charAt(i) != s.charAt(j)){
+            return false;
+        }
+
+       }
+
+       return true;
+
+    }
+
+   /*  ```
     Modele e implemente um método recursivo que recebe um inteiro zero ou positivo e retorna um String com o número em binário.
     ``` 
          String convBase2(int n) 
